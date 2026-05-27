@@ -1,0 +1,10 @@
+This project contains software only. It does not redistribute ECMWF ERA5 data.
+
+Users who download reanalysis data via this tooling must comply with:
+
+- ECMWF ERA5 terms of use: https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5
+- AWS Open Data Registry terms for ARCO ERA5 on Google Cloud Storage
+- Copernicus Climate Data Store terms when using the optional CDS backend
+
+When publishing work based on data prepared with these scripts, cite ERA5
+(Hersbach et al., 2020) and document your bounding box, date range, and script version.

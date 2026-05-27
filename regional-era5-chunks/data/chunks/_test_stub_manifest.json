@@ -1,0 +1,8 @@
+{
+  "backend": "zarr",
+  "chunks": [
+    "data/chunks/_test_stub_chunk000.nc"
+  ],
+  "total_hours": 24,
+  "nc_glob": "data/chunks/_test_stub_chunk*.nc"
+}

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "regional-era5-chunks"
+version = "0.1.0"
+description = "Download and prepare regional ERA5 hourly NetCDF chunks from ARCO Zarr or CDS"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "TaiScience Research Group" }]
+keywords = ["ERA5", "reanalysis", "NetCDF", "Zarr", "climate"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Atmospheric Science",
+]
+dependencies = [
+  "numpy>=1.26.0",
+  "pandas>=2.0.0",
+  "xarray>=2024.1.0",
+  "netCDF4>=1.6.0",
+  "fsspec>=2024.2.0",
+  "gcsfs>=2024.2.0",
+  "zarr>=2.16.0",
+]
+
+[project.optional-dependencies]
+cds = ["cdsapi>=0.7.0"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+era5-download = "regional_era5.download:main"
+era5-prepare = "regional_era5.prepare:main"
+era5-zarr-smoke = "regional_era5.download:zarr_smoke_main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["regional_era5*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,8 @@
+numpy>=1.26.0
+pandas>=2.0.0
+xarray>=2024.1.0
+netCDF4>=1.6.0
+fsspec>=2024.2.0
+gcsfs>=2024.2.0
+zarr>=2.16.0
+# optional: cdsapi>=0.7.0
